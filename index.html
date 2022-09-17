@@ -15,7 +15,9 @@
 
 }
 #date{
-    font-size:large;
+    font-size:1.5em;
+    font-weight: bold;
+    font-family: Calibri, Cambria, monospace;
 }
 body{
     background-color: aliceblue;
@@ -39,7 +41,7 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate()+" "+dayOfWeek.slice(3)+'.';
+    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate()+" "+dayOfWeek.slice(0,3)+'.';
     
     document.getElementById('lbl').innerHTML =
         `<div id="date">${date}</div>`;
