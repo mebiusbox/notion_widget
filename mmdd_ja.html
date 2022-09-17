@@ -1,0 +1,49 @@
+<html> 
+<head>
+    <title>Date Widget for Notion (ja)</title> 
+    <style>
+#lbl {
+    font-family: monospace;
+    font-size: xx-large;
+    color: #404040;
+    padding: 5px;
+    border: 1px solid #ececec;
+    text-align: center;
+    line-height: 2.5;
+    height:85%
+
+
+}
+#date{
+    font-size:1em;
+    font-weight: bold;
+    font-family: 'UD デジタル 教科書体 NK-R', 'BIZ UDPGothic', Calibri, Cambria, monospace;
+}
+body{
+    background-color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div id="lbl"></div>
+</body>
+
+<script>
+    var weekday = new Array(7);
+    weekday[0] = "日";
+    weekday[1] = "月";
+    weekday[2] = "火";
+    weekday[3] = "水";
+    weekday[4] = "木";
+    weekday[5] = "金";
+    weekday[6] = "土";
+
+    var today = new Date();
+    var hrs = today.getHours();
+    var dayOfWeek = weekday[today.getDay()];
+    var date = (today.getMonth()+1)+'/'+today.getDate()+" ("+dayOfWeek+')';
+    
+    document.getElementById('lbl').innerHTML =
+        `<div id="date">${date}</div>`;
+</script> 
+</html>
