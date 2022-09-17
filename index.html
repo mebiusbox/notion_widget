@@ -1,6 +1,6 @@
 <html> 
 <head>
-    <title>Greeting Message</title> 
+    <title>Date Widget for Notion</title> 
     <style>
 #lbl {
     font-family: monospace;
@@ -39,7 +39,7 @@ body{
     var today = new Date();
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
-    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate()+" "+dayOfWeek;
+    var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+today.getDate()+" "+dayOfWeek.slice(3)+'.';
     
     document.getElementById('lbl').innerHTML =
         `<div id="date">${date}</div>`;
